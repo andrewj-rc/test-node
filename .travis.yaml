@@ -1,0 +1,11 @@
+sudo: required 
+services:
+  - docker
+
+script:
+  - docker build -t algofields/node .
+  - docker images algofields/node
+  # - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  # - docker push $DOCKER_USERNAME/$DOCKER_REPO:$TRAVIS_BUILD_NUMBER
+  # - docker tag $DOCKER_USERNAME/$DOCKER_REPO:$TRAVIS_BUILD_NUMBER $DOCKER_USERNAME/$DOCKER_REPO:latest
+  # - docker push $DOCKER_USERNAME/$DOCKER_REPO:latest
